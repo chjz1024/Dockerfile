@@ -32,10 +32,6 @@ jobs:
       run: |
         for folder in $(ls -d */); do
           image_name="${folder%/}"
-          if git diff --quiet HEAD^ HEAD -- ./${image_name}; then
-            echo "No changes in ${image_name}, skipping build."
-            continue
-          fi
           if [[ -f ./${image_name}/build.sh ]]; then
             SHA=${{ github.sha }} OWNER=${{ github.repository_owner }} ./${image_name}/build.sh
             continue
