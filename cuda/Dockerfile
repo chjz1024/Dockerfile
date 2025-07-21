@@ -8,4 +8,4 @@ RUN bash /tmp/setup.sh \
 
 USER user
 WORKDIR /home/user
-CMD ["bash"]
+CMD ["zsh"]
