@@ -23,4 +23,6 @@ useradd -m ${USERNAME} --uid=${USER_UID}
 usermod -aG sudo ${USERNAME}
 echo 'user:password' | chpasswd
 echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/${USERNAME}
+chsh -s /bin/bash ${USERNAME}
 chown -R ${USERNAME}:${USERNAME} ${MINICONDA_PATH}
+chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
