@@ -3,6 +3,7 @@ set -e
 
 TAGS=(
   12.4.1-cudnn-runtime-ubuntu22.04
+  12.6.3-cudnn-devel-ubuntu22.04
 )
 
 for tag in "${TAGS[@]}"; do
