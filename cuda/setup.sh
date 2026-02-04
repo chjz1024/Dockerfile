@@ -14,6 +14,7 @@ sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 apt-get update
 apt-get upgrade -y
 apt-get install -y --no-install-recommends curl wget git sudo neovim tmux less ssh zsh zsh-syntax-highlighting zsh-autosuggestions
+apt-get install -y --no-install-recommends tini
 rm -rf /var/lib/apt/lists/*
 
 curl -s -o miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-${MINICONDA_VERSION}-Linux-x86_64.sh
